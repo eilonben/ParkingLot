@@ -1,4 +1,4 @@
-
+import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -7,15 +7,11 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
 import org.json.JSONObject;
-
-import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 public class OCRManager {
@@ -24,18 +20,27 @@ public class OCRManager {
     public OCRManager() {
     }
 
-    public String sendOCRPost(String imageUrl) throws Exception{
+    /**
+     * Sends a url of a license plate image to the OCR space API by POST request
+     * @param filePath - path of the image to be sent to the api
+     * @return the string of the license plate described in the picture
+     * @throws Exception
+     */
+    public String sendOCRPost(String filePath,String format) throws Exception{
         HttpClient httpclient = HttpClients.createDefault();
         HttpPost httppost = new HttpPost(url);
+        byte[] fileContent = FileUtils.readFileToByteArray(new File(filePath));
+        String encodedString = Base64.getEncoder().encodeToString(fileContent);
 
 // Request parameters and other properties.
-        List<NameValuePair> params = new ArrayList<NameValuePair>(2);
+        List<NameValuePair> params = new ArrayList<>(2);
         params.add(new BasicNameValuePair("apikey", apiKey));
-        params.add(new BasicNameValuePair("url", imageUrl));
+        params.add(new BasicNameValuePair("base64Image", "data:image/"+format+";base64,"+encodedString));
         httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
 
 //Execute and get the response.
         HttpResponse response = httpclient.execute(httppost);
+        ParkingLogger.getInstance().logger.info("sent a post request to OCR space with the image path "+filePath);
         HttpEntity entity = response.getEntity();
         String jsonResponse="";
         if (entity != null) {
@@ -51,60 +56,34 @@ public class OCRManager {
                  jsonResponse = out.toString();
             }
 
-
+            //Response from OCR Space given as a json object
             JSONObject jsonData =new JSONObject(jsonResponse);
             if (jsonData.has("ParsedResults"))
                 return handleJSONResponse(jsonData.getJSONArray("ParsedResults").getJSONObject(0));
             else if (jsonData.has("IsErroredOnProcessing")
                     && jsonData.getBoolean("IsErroredOnProcessing"))
-                return jsonData.toString();
-            return null;
+                throw new OCRException("There has been an error with processing the image.");
         }
-//        URL postURL = new URL(url);
-//        HttpsURLConnection con = (HttpsURLConnection) postURL.openConnection();
-//
-//        //add request header
-//        con.setRequestMethod("POST");
-//        con.setRequestProperty("User-Agent", "Mozilla/5.0");
-//        con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-//
-//        //Chaining the api key and image url to the ocrSpace url
-//        String params = "apikey="+apiKey+"&"+"url="+imageUrl;
-//
-//        // Send post request
-//        con.setDoOutput(true);
-//        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-//        wr.writeBytes(URLEncoder.encode(params,"UTF-8"));
-//        wr.flush();
-//        wr.close();
-//
-//        //retrieve JSON result
-//        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-//        String inputLine;
-//        StringBuffer response = new StringBuffer();
-//
-//        while ((inputLine = in.readLine()) != null) {
-//            response.append(inputLine);
-//        }
-//        in.close();
-//
-//
-//        JSONObject responseData =new JSONObject(String.valueOf(response));
-//        return handleJSONResponse(responseData);
         return null;
     }
 
 
     private String handleJSONResponse(JSONObject response) throws Exception {
-        int output = -1;
+
         if (response.has("ParsedText")) {
             String text = response.getString("ParsedText");
-            //TODO write to log
-            return text;
+            String[] splitLines = text.split("\n");
+            if(text.length()==0){
+                ParkingLogger.getInstance().logger.info("the response given from the API contained no text");
+                throw new OCRException("Error: No text was parsed by the OCR API from the image given.");
+
+            }
+            ParkingLogger.getInstance().logger.info("The API parsed the image text. the plate number: "+splitLines[0]);
+            return splitLines[0];
         } else if (response.has("ErrorMessage")) {
             String error = response.getString("ErrorMessage");
-            //TODO write to ErrorLog
-            throw new Exception("There was a problem parsing the picture: "+error);
+            ParkingLogger.getInstance().logger.info("An error from OCR space was received: "+error);
+            throw new OCRException("Error: There was a problem parsing the picture: "+error);
         }
         return null;
     }

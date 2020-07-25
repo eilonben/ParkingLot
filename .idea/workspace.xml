@@ -1,19 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ParkingLot:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0d8ed9-0d62-4efb-9d75-13750a65d6b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/OCRException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ParkingLot_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingDB.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plates/approved1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plates/approved2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plates/approved3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plates/denied1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plates/denied2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plates/denied3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ParkingLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParkingLotLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OCRManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OCRManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OCRManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OCRManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OCRManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="parkingDB" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,24 +61,35 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1f5Vt9qcvf98n2hDpMOAyoH6DWo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.20574713" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainService">
+    <configuration name="DBManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DBManager" />
+      <module name="ParkingLot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainService" />
       <module name="ParkingLot" />
@@ -54,6 +100,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainService" />
+        <item itemvalue="Application.DBManager" />
       </list>
     </recent_temporary>
   </component>
@@ -79,58 +126,86 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595508152644</updated>
-      <workItem from="1595509655886" duration="13545000" />
+      <workItem from="1595509655886" duration="24054000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1492" height="206" key="GridCell.Tab.0.bottom" timestamp="1595623425854">
+    <state x="527" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595701930956">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="206" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1595623425854" />
-    <state width="1492" height="206" key="GridCell.Tab.0.center" timestamp="1595623425854">
+    <state x="527" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.826@0.0.1536.826" timestamp="1595701930956" />
+    <state x="577" y="167" key="FileChooserDialogImpl" timestamp="1595701964199">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="206" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1595623425854" />
-    <state width="1492" height="206" key="GridCell.Tab.0.left" timestamp="1595623425854">
+    <state x="577" y="167" key="FileChooserDialogImpl/0.0.1536.826@0.0.1536.826" timestamp="1595701964199" />
+    <state width="1492" height="206" key="GridCell.Tab.0.bottom" timestamp="1595701599693">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="206" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1595623425854" />
-    <state width="1492" height="206" key="GridCell.Tab.0.right" timestamp="1595623425854">
+    <state width="1492" height="206" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1595701599693" />
+    <state width="1492" height="206" key="GridCell.Tab.0.center" timestamp="1595701599693">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="206" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1595623425854" />
-    <state width="1492" height="256" key="GridCell.Tab.1.bottom" timestamp="1595623401417">
+    <state width="1492" height="206" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1595701599693" />
+    <state width="1492" height="206" key="GridCell.Tab.0.left" timestamp="1595701599692">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="256" key="GridCell.Tab.1.bottom/0.0.1536.826@0.0.1536.826" timestamp="1595623401417" />
-    <state width="1492" height="256" key="GridCell.Tab.1.center" timestamp="1595623401417">
+    <state width="1492" height="206" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1595701599692" />
+    <state width="1492" height="206" key="GridCell.Tab.0.right" timestamp="1595701599693">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="256" key="GridCell.Tab.1.center/0.0.1536.826@0.0.1536.826" timestamp="1595623401417" />
-    <state width="1492" height="256" key="GridCell.Tab.1.left" timestamp="1595623401417">
+    <state width="1492" height="206" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1595701599693" />
+    <state width="1492" height="256" key="GridCell.Tab.1.bottom" timestamp="1595701130824">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="256" key="GridCell.Tab.1.left/0.0.1536.826@0.0.1536.826" timestamp="1595623401417" />
-    <state width="1492" height="256" key="GridCell.Tab.1.right" timestamp="1595623401417">
+    <state width="1492" height="256" key="GridCell.Tab.1.bottom/0.0.1536.826@0.0.1536.826" timestamp="1595701130824" />
+    <state width="1492" height="256" key="GridCell.Tab.1.center" timestamp="1595701130823">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="256" key="GridCell.Tab.1.right/0.0.1536.826@0.0.1536.826" timestamp="1595623401417" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1595619991212">
+    <state width="1492" height="256" key="GridCell.Tab.1.center/0.0.1536.826@0.0.1536.826" timestamp="1595701130823" />
+    <state width="1492" height="256" key="GridCell.Tab.1.left" timestamp="1595701130823">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.826@0.0.1536.826" timestamp="1595619991212" />
+    <state width="1492" height="256" key="GridCell.Tab.1.left/0.0.1536.826@0.0.1536.826" timestamp="1595701130823" />
+    <state width="1492" height="256" key="GridCell.Tab.1.right" timestamp="1595701130823">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state width="1492" height="256" key="GridCell.Tab.1.right/0.0.1536.826@0.0.1536.826" timestamp="1595701130823" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1595699184486">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.826@0.0.1536.826" timestamp="1595699184486" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1595701967827">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.826@0.0.1536.826" timestamp="1595701967827" />
+    <state width="775" height="420" key="XDebugger.FullValuePopup" timestamp="1595693530599">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state width="775" height="420" key="XDebugger.FullValuePopup/0.0.1536.826@0.0.1536.826" timestamp="1595693530599" />
+    <state x="330" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1595694867487">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state x="330" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.826@0.0.1536.826" timestamp="1595694867487" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/MainService.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="6" />
+          <line>23</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/OCRManager.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
