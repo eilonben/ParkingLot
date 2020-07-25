@@ -1,6 +1,0 @@
-יולי 25, 2020 9:34:26 אחה״צ OCRManager sendOCRPost
-INFO: sent a post request to OCR space with the image path ..\..\..\plates\denied1.jpg
-יולי 25, 2020 9:34:26 אחה״צ OCRManager handleJSONResponse
-INFO: The API parsed the image text. the plate number: 63:873-26
-יולי 25, 2020 9:34:26 אחה״צ DBManager insert
-INFO: Inserted the plate and the authorization result into the DB
