@@ -7,24 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0d8ed9-0d62-4efb-9d75-13750a65d6b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ParkingLot_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingDB.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plates/approved1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plates/approved2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plates/approved3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plates/denied1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plates/denied2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plates/denied3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ParkingLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OCRManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OCRManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OCRManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OCRManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyLogFile.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ParkingLot_jar/parkingDB.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingDB.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +27,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="parkingDB" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -126,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595508152644</updated>
-      <workItem from="1595509655886" duration="24054000" />
+      <workItem from="1595509655886" duration="24320000" />
     </task>
     <servers />
   </component>
